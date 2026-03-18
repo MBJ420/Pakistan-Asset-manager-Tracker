@@ -68,18 +68,4 @@ If running manually:
 - **Terminal 1 (Backend):** `cd backend && venv\Scripts\activate && uvicorn app.main:app --reload --port 8001`
 - **Terminal 2 (Frontend):** `cd frontend && npm run electron:dev`
 
-## Safe to Upload to GitHub?
-When pushing your repository to public version control, ensuring privacy is critical. **This project was designed securely, but handle user data locally.**
 
-### Files You MUST NOT Upload (Add these to your `.gitignore`):
-- ⚠️ `.env` files (Contains your sensitive credentials like APIs and Passwords).
-- ⚠️ `backend/fundtracker.db` (The SQLite Database acts as a local storage server containing hashed passwords, user account info, portfolio asset data, etc.).
-- ⚠️ The user data ingestion directory, especially folders pointing to personal `meezan` or `hbl` statements (e.g., `C:/Users/.../data/`).
-- ⚠️ Dependencies/Build outputs: `node_modules/`, `backend/venv/`, `frontend/dist/`, `frontend/build/`, `.npm/`, `__pycache__/`.
-
-### Files SAFE To Upload (Keep these tracked):
-- ✔️ All Source code (`backend/app/*` and `frontend/src/*`).
-- ✔️ Build and Package configuration configs (`package.json`, `package-lock.json`, `backend/requirements.txt`, `tsconfig.json`, `vite.config.ts`, `tailwind.config.js`).
-- ✔️ Entry points config like `frontend/electron/main.cjs`.
-- ✔️ Project documentation (`README.md`, `project_knowledge.md`).
-- ✔️ Command scripts (`start_app.bat`, `stop_app.bat`, `check_db.py`, `fix_spacing.py`).
