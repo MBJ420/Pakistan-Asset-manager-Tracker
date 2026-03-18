@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white-5: rgba(255, 255, 255, 0.05);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-success-10: rgba(16, 185, 129, 0.1);
+  --color-danger-10: rgba(239, 68, 68, 0.1);
+  --color-neon-purple-5: rgba(139, 92, 246, 0.05);
+  --color-neon-purple-10: rgba(139, 92, 246, 0.1);
+  --color-neon-purple-20: rgba(139, 92, 246, 0.2);
+  --color-neon-purple-30: rgba(139, 92, 246, 0.3);
+  --color-midnight-50: rgba(11, 11, 21, 0.5);
+
+  --font-sans: Inter, sans-serif;
+
+  --color-midnight: var(--theme-midnight);
+  --color-surface: var(--theme-surface);
+  --color-surface-highlight: var(--theme-highlight);
+  --color-neon-purple: #8B5CF6;
+  --color-electric-blue: #3B82F6;
+  --color-accent-pink: #EC4899;
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+}
+
+@layer base {
+  :root {
+    --theme-midnight: #0B0B15;
+    --theme-surface: #121223;
+    --theme-highlight: #1E1E3F;
+    --theme-text-primary: #E2E8F0;
+    --theme-text-secondary: #94A3B8;
+  }
+
+  .light {
+    --theme-midnight: #F8FAFC;
+    --theme-surface: #FFFFFF;
+    --theme-highlight: #F1F5F9;
+    --theme-text-primary: #1E293B;
+    --theme-text-secondary: #64748B;
+    --color-white-5: rgba(0, 0, 0, 0.05);
+    --color-white-10: rgba(0, 0, 0, 0.1);
+    --color-white-20: rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    @apply bg-midnight text-text-primary antialiased;
+  }
+}
+
+/* Custom Scrollbar for WebKit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-midnight;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-highlight rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon-purple;
+}
+
+@media print {
+  @page {
+    margin: 0.5in;
+    size: landscape;
+  }
+
+  body {
+    background-color: transparent !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide UI Elements */
+  aside,
+  header,
+  button,
+  select {
+    display: none !important;
+  }
+
+  /* Reformat Main Content */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  /* Keep backgrounds on cards */
+  div[class*="bg-surface"] {
+    background-color: #121223 !important;
+  }
+}

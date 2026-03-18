@@ -1,0 +1,30 @@
+# Database
+fundtracker.db
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+.env.local
+
+# Debug files
+*_dump.html
+*_dump.txt
+*.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+build/
+.npm/
+
+# OS Files
+.DS_Store
+Thumbs.db
+gemini_app_guide.txt

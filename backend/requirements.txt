@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-multipart
+python-jose[cryptography]
+passlib[argon2]
+pdfplumber
+pandas
+alembic
+pydantic-settings
+watchdog
+apscheduler==3.11.2
+playwright
+google-generativeai
