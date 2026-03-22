@@ -1,7 +1,6 @@
 # Fund Tracker
 
-## Application Overview
-Fund Tracker is a monolithic-style web application featuring a Python **FastAPI** backend and a **React/Electron** frontend. It automatically ingests user bank statements and Fund Manager Reports (FMRs) from a local directory to track mutual fund investments, scrape daily Net Asset Values (NAVs) from MUFAP, calculate gains/losses, and categorize funds by risk and asset allocation using AI (Google Gemini 2.5 Flash API).
+
 
 ## Technical Stack & Libraries Used
 - **Backend Framework:** FastAPI, Uvicorn, SQLAlchemy (for ORM), Pydantic.
