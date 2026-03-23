@@ -1,4 +1,4 @@
-
+import re
 
 file_path = 'frontend/src/pages/Dashboard.tsx'
 with open(file_path, 'r', encoding='utf-8') as f:
