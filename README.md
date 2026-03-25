@@ -5,7 +5,7 @@ Fund Tracker is a monolithic-style web application featuring a Python **FastAPI*
 
 
 ## Technical Stack & Libraries Used
-- **Backend Framework:** FastAPI, Uvicorn, SQLAlchemy (for ORM), Pydantic.
+
 - **Backend Database:** SQLite (`fundtracker.db`).
 - **Data Collection & Scraping:** Playwright, BeautifulSoup4, pandas.
 - **PDF & AI Processing:** pdfplumber, Google Generative AI (Gemini).
